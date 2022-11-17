@@ -13,7 +13,6 @@ pipeline {
                   docker push monasamir/final
               """
           }
-        } 
       }
     }
     stage('deploy') {
