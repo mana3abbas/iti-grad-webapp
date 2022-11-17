@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: final
+  name: final
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: final
+  template:
+    metadata:
+      labels:
+        app: final
+    spec:
+      containers:
+      - image: monasamir/final:latest
+        name: bakehouse
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        resources: {}
+
+
