@@ -14,6 +14,7 @@ pipeline {
               """
           }
       }
+      } 
     }
     stage('deploy') {
     
@@ -27,7 +28,7 @@ pipeline {
                 """
             }
           
-        }
+        
 
 
             withCredentials([file(credentialsId: 'kube', variable: 'KUBECONFIG')]) {
